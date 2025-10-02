@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriculados - Universidad THLJ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="imagenes/logouni.jpeg">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-graduation-cap me-2"></i>Universidad THLJ
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carreras.html"><i class="fas fa-book me-1"></i>Carreras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matriculas.html"><i class="fas fa-edit me-1"></i>Matrícula</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="matriculados.html"><i class="fas fa-users me-1"></i>Matriculados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 mb-5">
+    <div class="card shadow">
+      <div class="card-header text-center py-4">
+        <h2><i class="fas fa-users me-2"></i>Estudiantes Matriculados</h2>
+        <p class="text-muted mb-0">Registro completo de matrículas</p>
+      </div>
+      <div class="card-body">
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <div class="stats-box">
+              <i class="fas fa-users stats-icon"></i>
+              <h3 id="totalEstudiantes">0</h3>
+              <p>Total Estudiantes</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stats-box">
+              <i class="fas fa-school stats-icon"></i>
+              <h3 id="totalPresencial">0</h3>
+              <p>Presencial</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stats-box">
+              <i class="fas fa-laptop-house stats-icon"></i>
+              <h3 id="totalVirtual">0</h3>
+              <p>Virtual</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stats-box">
+              <i class="fas fa-book-reader stats-icon"></i>
+              <h3 id="totalCreditos">0</h3>
+              <p>Créditos Totales</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-search"></i></span>
+              <input type="text" class="form-control" id="buscarEstudiante" placeholder="Buscar por nombre, DNI o email...">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="filtroPrograma">
+              <option value="">Todos los programas</option>
+              <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+              <option value="Administración">Administración</option>
+              <option value="Enfermería">Enfermería</option>
+              <option value="Contabilidad">Contabilidad</option>
+              <option value="Derecho">Derecho</option>
+              <option value="Diseño Gráfico">Diseño Gráfico</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Marketing Digital">Marketing Digital</option>
+              <option value="Arquitectura">Arquitectura</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="filtroModalidad">
+              <option value="">Todas las modalidades</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Virtual">Virtual</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+          <div>
+            <span class="badge bg-info" id="resultadosCount">0 resultados</span>
+          </div>
+          <div>
+            <button id="btnExportar" class="btn btn-success me-2">
+              <i class="fas fa-download me-2"></i>Exportar JSON
+            </button>
+            <button id="btnLimpiarDatos" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalConfirmar">
+              <i class="fas fa-trash me-2"></i>Limpiar Datos
+            </button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover table-striped" id="tablaMatriculados">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th><i class="fas fa-user me-2"></i>Nombre</th>
+                <th><i class="fas fa-id-card me-2"></i>DNI</th>
+                <th><i class="fas fa-envelope me-2"></i>Email</th>
+                <th><i class="fas fa-phone me-2"></i>Teléfono</th>
+                <th><i class="fas fa-book me-2"></i>Programa</th>
+                <th><i class="fas fa-laptop me-2"></i>Modalidad</th>
+                <th><i class="fas fa-layer-group me-2"></i>Ciclo</th>
+                <th><i class="fas fa-book-reader me-2"></i>Asignaturas</th>
+                <th><i class="fas fa-star me-2"></i>Créditos</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyMatriculados">
+              </tbody>
+          </table>
+        </div>
+
+        <div id="noDataMessage" class="text-center py-5" style="display: none;">
+          <i class="fas fa-inbox fa-4x text-muted mb-3"></i>
+          <h4 class="text-muted">No hay estudiantes matriculados</h4>
+          <p class="text-muted">Los registros de matrícula aparecerán aquí</p>
+          <a href="matriculas.html" class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>Registrar Matrícula
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalConfirmar" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title"><i class="fas fa-exclamation-triangle me-2"></i>Confirmar Acción</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Está seguro que desea eliminar todos los registros de matrícula?</p>
+          <p class="text-danger"><strong>Esta acción no se puede deshacer.</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" id="btnConfirmarLimpiar">
+            <i class="fas fa-trash me-2"></i>Sí, Eliminar Todo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDetalle" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-user-graduate me-2"></i>Detalle del Estudiante</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="detalleEstudiante">
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer py-4 mt-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5><i class="fas fa-graduation-cap me-2"></i>Universidad Virtual</h5>
+          <p class="text-muted">Formando profesionales de excelencia desde 1995.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-muted">Inicio</a></li>
+            <li><a href="carreras.html" class="text-muted">Carreras</a></li>
+            <li><a href="matriculas.html" class="text-muted">Matrícula</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p class="text-muted">
+            <i class="fas fa-envelope me-2"></i>info@universidadvirtual.edu<br>
+            <i class="fas fa-phone me-2"></i>+51 01 234 5678
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

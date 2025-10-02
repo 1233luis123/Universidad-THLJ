@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carreras - Universidad THLJ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="imagenes/logotjhl.jpeg">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-graduation-cap me-2"></i>Universidad THLJ
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="carreras.html"><i class="fas fa-book me-1"></i>Carreras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matriculas.html"><i class="fas fa-edit me-1"></i>Matrícula</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matriculados.html"><i class="fas fa-users me-1"></i>Matriculados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-bold">Nuestras Carreras Profesionales</h1>
+      <p class="lead text-muted">Descubre programas académicos diseñados para tu éxito profesional</p>
+    </div>
+
+    <!-- Filtro de búsqueda -->
+    <div class="row mb-4">
+      <div class="col-md-8 mx-auto">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
+          <input type="text" class="form-control" id="searchCarrera" placeholder="Buscar carrera...">
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards de Carreras -->
+    <div class="row g-4 mb-5" id="carrerasContainer">
+      <!-- Ingeniería de Sistemas -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Ingeniería de Sistemas" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-laptop-code fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Ingeniería de Sistemas</h5>
+            </div>
+            <p class="card-text">Formación en programación, redes, bases de datos, desarrollo web y móvil.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>200 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Certificaciones IT</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Administración -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Administración" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-chart-line fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Administración</h5>
+            </div>
+            <p class="card-text">Gestión empresarial, finanzas, marketing y recursos humanos para líderes.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>195 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Práctica empresarial</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enfermería -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Enfermería" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-heartbeat fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Enfermería</h5>
+            </div>
+            <p class="card-text">Cuidado integral del paciente con formación humanista y científica.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>210 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Prácticas hospitalarias</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contabilidad -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Contabilidad" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-calculator fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Contabilidad</h5>
+            </div>
+            <p class="card-text">Especialización en auditoría, tributación y análisis financiero.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>198 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Software contable</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Derecho -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Derecho" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-balance-scale fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Derecho</h5>
+            </div>
+            <p class="card-text">Formación jurídica integral con énfasis en litigación y asesoría legal.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>12 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>220 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Clínica jurídica</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diseño Gráfico -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Diseño Gráfico" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-paint-brush fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Diseño Gráfico</h5>
+            </div>
+            <p class="card-text">Creatividad digital, branding, UX/UI y producción audiovisual.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>190 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Portfolio profesional</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Psicología -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Psicología" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-brain fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Psicología</h5>
+            </div>
+            <p class="card-text">Comprensión del comportamiento humano, terapia clínica y organizacional.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>205 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Prácticas clínicas</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Marketing" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-bullhorn fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Marketing Digital</h5>
+            </div>
+            <p class="card-text">Estrategias digitales, redes sociales, SEO y análisis de mercado.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>10 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>192 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Certificación Google</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arquitectura -->
+      <div class="col-md-4">
+        <div class="card career-card h-100">
+          <div class="img-overlay">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop" 
+                 class="card-img-top" alt="Arquitectura" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary text-white rounded-circle p-3 me-3">
+                <i class="fas fa-building fa-2x"></i>
+              </div>
+              <h5 class="card-title mb-0">Arquitectura</h5>
+            </div>
+            <p class="card-text">Diseño arquitectónico, urbanismo sostenible y proyectos de construcción.</p>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>12 ciclos académicos</li>
+              <li><i class="fas fa-check text-success me-2"></i>230 créditos totales</li>
+              <li><i class="fas fa-check text-success me-2"></i>Software CAD/BIM</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="matriculas.html" class="btn btn-primary w-100">Matricularme</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mallas Curriculares -->
+    <div class="mt-5 mb-5">
+      <h2 class="text-center mb-4">Mallas Curriculares</h2>
+      <p class="text-center text-muted mb-4">Plan de estudios detallado por carrera</p>
+      
+      <!-- Tabs de Carreras -->
+      <ul class="nav nav-tabs justify-content-center mb-4" id="mallasTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="sistemas-tab" data-bs-toggle="tab" data-bs-target="#sistemas" type="button">
+            <i class="fas fa-laptop-code me-2"></i>Ing. Sistemas
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button">
+            <i class="fas fa-chart-line me-2"></i>Administración
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="enfermeria-tab" data-bs-toggle="tab" data-bs-target="#enfermeria" type="button">
+            <i class="fas fa-heartbeat me-2"></i>Enfermería
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="psicologia-tab" data-bs-toggle="tab" data-bs-target="#psicologia" type="button">
+            <i class="fas fa-brain me-2"></i>Psicología
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="mallasTabContent">
+        <!-- Ingeniería de Sistemas -->
+        <div class="tab-pane fade show active" id="sistemas" role="tabpanel">
+          <div class="accordion" id="mallaS istemas">
+            <!-- Ciclo I -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ciclo1">
+                  <i class="fas fa-book-open me-2"></i>Ciclo I
+                </button>
+              </h2>
+              <div id="ciclo1" class="accordion-collapse collapse show" data-bs-parent="#mallaSistemas">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-square-root-alt text-primary me-2"></i>Matemática Básica</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-code text-primary me-2"></i>Introducción a la Programación</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-language text-primary me-2"></i>Inglés I</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-comments text-primary me-2"></i>Comunicación Oral y Escrita</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-brain text-primary me-2"></i>Pensamiento Lógico</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ciclo II -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ciclo2">
+                  <i class="fas fa-book-open me-2"></i>Ciclo II
+                </button>
+              </h2>
+              <div id="ciclo2" class="accordion-collapse collapse" data-bs-parent="#mallaSistemas">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-calculator text-primary me-2"></i>Cálculo I</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-laptop-code text-primary me-2"></i>Programación Orientada a Objetos</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-language text-primary me-2"></i>Inglés II</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-atom text-primary me-2"></i>Física I</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-project-diagram text-primary me-2"></i>Algoritmos y Estructura de Datos</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ciclo III -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ciclo3">
+                  <i class="fas fa-book-open me-2"></i>Ciclo III
+                </button>
+              </h2>
+              <div id="ciclo3" class="accordion-collapse collapse" data-bs-parent="#mallaSistemas">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-database text-primary me-2"></i>Base de Datos I</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-globe text-primary me-2"></i>Desarrollo Web</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-chart-bar text-primary me-2"></i>Estadística</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-network-wired text-primary me-2"></i>Redes de Computadoras</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-language text-primary me-2"></i>Inglés III</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Administración -->
+        <div class="tab-pane fade" id="admin" role="tabpanel">
+          <div class="accordion" id="mallaAdmin">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#adminCiclo1">
+                  <i class="fas fa-book-open me-2"></i>Ciclo I
+                </button>
+              </h2>
+              <div id="adminCiclo1" class="accordion-collapse collapse show" data-bs-parent="#mallaAdmin">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-building text-primary me-2"></i>Introducción a la Administración</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-calculator text-primary me-2"></i>Matemática para Negocios</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-balance-scale text-primary me-2"></i>Economía General</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-comments text-primary me-2"></i>Comunicación Empresarial</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-laptop text-primary me-2"></i>Informática Aplicada</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adminCiclo2">
+                  <i class="fas fa-book-open me-2"></i>Ciclo II
+                </button>
+              </h2>
+              <div id="adminCiclo2" class="accordion-collapse collapse" data-bs-parent="#mallaAdmin">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-users text-primary me-2"></i>Comportamiento Organizacional</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-chart-line text-primary me-2"></i>Contabilidad Financiera</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-bullhorn text-primary me-2"></i>Fundamentos de Marketing</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-chart-pie text-primary me-2"></i>Estadística Empresarial</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enfermería -->
+        <div class="tab-pane fade" id="enfermeria" role="tabpanel">
+          <div class="accordion" id="mallaEnfermeria">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#enfCiclo1">
+                  <i class="fas fa-book-open me-2"></i>Ciclo I
+                </button>
+              </h2>
+              <div id="enfCiclo1" class="accordion-collapse collapse show" data-bs-parent="#mallaEnfermeria">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-microscope text-primary me-2"></i>Anatomía Humana</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-heartbeat text-primary me-2"></i>Fisiología</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-flask text-primary me-2"></i>Bioquímica</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-user-nurse text-primary me-2"></i>Introducción a Enfermería</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-hands-helping text-primary me-2"></i>Ética Profesional</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Psicología -->
+        <div class="tab-pane fade" id="psicologia" role="tabpanel">
+          <div class="accordion" id="mallaPsicologia">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#psiCiclo1">
+                  <i class="fas fa-book-open me-2"></i>Ciclo I
+                </button>
+              </h2>
+              <div id="psiCiclo1" class="accordion-collapse collapse show" data-bs-parent="#mallaPsicologia">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-brain text-primary me-2"></i>Introducción a la Psicología</span>
+                          <span class="badge bg-primary">4 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-microscope text-primary me-2"></i>Neurociencias Básicas</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-chart-bar text-primary me-2"></i>Estadística Aplicada</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-book-reader text-primary me-2"></i>Métodos de Investigación</span>
+                          <span class="badge bg-primary">3 créditos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                          <span><i class="fas fa-comments text-primary me-2"></i>Comunicación Terapéutica</span>
+                          <span class="badge bg-primary">2 créditos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5><i class="fas fa-graduation-cap me-2"></i>Universidad Virtual</h5>
+          <p class="text-muted">Formando profesionales de excelencia desde 1995.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-muted">Inicio</a></li>
+            <li><a href="matricula.html" class="text-muted">Matrícula</a></li>
+            <li><a href="matriculados.html" class="text-muted">Matriculados</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p class="text-muted">
+            <i class="fas fa-envelope me-2"></i>info@universidadvirtual.edu<br>
+            <i class="fas fa-phone me-2"></i>+51 01 234 5678
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

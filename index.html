@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universidad THLJ - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="imagen/png" href="imagenes/logotjhl.jpeg">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-graduation-cap me-2"></i>Universidad THLJ
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carreras.html"><i class="fas fa-book me-1"></i>Carreras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matriculas.html"><i class="fas fa-edit me-1"></i>Matrícula</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matriculados.html"><i class="fas fa-users me-1"></i>Matriculados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section text-white" style="background: url('imagenes/portada.jpg') center/cover no-repeat; min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 bg-dark bg-opacity-75 p-4 rounded">
+          <h1 class="display-4 fw-bold mb-4">Bienvenidos a la Universidad Virtual</h1>
+          <p class="lead mb-4">Formando profesionales con excelencia académica en modalidad presencial y virtual.</p>
+          <div class="d-flex gap-3">
+            <a href="matriculas.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-edit me-2"></i>Matricúlate Ahora
+            </a>
+            <a href="carreras.html" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-book me-2"></i>Ver Carreras
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="container my-5">
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <div class="stat-card p-3 shadow rounded">
+          <img src="imagenes/graduado.png" alt="Estudiantes" class="img-fluid rounded-circle mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h3 class="stat-number" id="studentsCount">0</h3>
+          <p class="stat-label">Estudiantes Matriculados</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card p-3 shadow rounded">
+          <img src="imagenes/libro.png" alt="Libros" class="img-fluid rounded-circle mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h3 class="stat-number">15+</h3>
+          <p class="stat-label">Carreras Profesionales</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card p-3 shadow rounded">
+          <img src="imagenes/profesor.png" alt="Docentes" class="img-fluid rounded-circle mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h3 class="stat-number">200+</h3>
+          <p class="stat-label">Docentes Calificados</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card p-3 shadow rounded">
+          <img src="imagenes/medallaoro.png" alt="Premio" class="img-fluid rounded-circle mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h3 class="stat-number">98%</h3>
+          <p class="stat-label">Satisfacción Estudiantil</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">¿Por qué elegirnos?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 shadow bg-white rounded">
+            <img src="imagenes/claseenlinea.png" alt="Clases online" class="img-fluid rounded mb-3">
+            <h4>Modalidad Flexible</h4>
+            <p>Estudia de forma presencial o virtual, adaptándose a tu estilo de vida y necesidades.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 shadow bg-white rounded">
+            <img src="imagenes/diploma.png" alt="Diploma" class="img-fluid rounded mb-3">
+            <h4>Certificación Oficial</h4>
+            <p>Títulos reconocidos nacional e internacionalmente que impulsan tu carrera profesional.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 shadow bg-white rounded">
+            <img src="imagenes/horario.png" alt="Horarios flexibles" class="img-fluid rounded mb-3">
+            <h4>Horarios Accesibles</h4>
+            <p>Clases diseñadas para que puedas combinar estudios con trabajo y vida personal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="cta-section py-5 text-white text-center" style="background: url('img/cta.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h2 class="mb-4">¿Listo para comenzar tu futuro?</h2>
+      <p class="lead mb-4">Únete a miles de estudiantes que ya están construyendo su carrera profesional.</p>
+      <a href="matriculas.html" class="btn btn-light btn-lg">
+        <i class="fas fa-arrow-right me-2"></i>Iniciar Matrícula
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5><i class="fas fa-graduation-cap me-2"></i>Universidad Virtual</h5>
+          <p class="text-muted">Formando profesionales de excelencia desde 1995.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="carreras.html" class="text-muted">Carreras</a></li>
+            <li><a href="matriculas.html" class="text-muted">Matrícula</a></li>
+            <li><a href="matriculados.html" class="text-muted">Matriculados</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p class="text-muted">
+            <i class="fas fa-envelope me-2"></i>info@universidadvirtual.edu<br>
+            <i class="fas fa-phone me-2"></i>+51 01 234 5678
+          </p>
+        </div>
+      </div>
+      <hr class="my-3 border-secondary">
+      <div class="text-center text-muted">
+        <p>&copy; 2025 Universidad Virtual. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
